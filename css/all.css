@@ -1,0 +1,297 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*--css reset */
+
+/*--不太清楚如何自動計算 */
+＊,*:after,*:before{
+    box-sizing: border-box;
+  }
+
+/*清除 img 下面留白  */
+img{
+    display: block;
+}
+ 
+body {
+    font-family:Roboto,微軟正黑體,sans-serif;
+    font-style: italic; /*斜體*/
+}
+
+.d-flex{
+	display: flex;
+}
+
+.container {
+    text-align: center;
+   /* margin: 0 auto; --- 是否可以不用寫？*/
+}
+
+/* .mb-64{
+	margin-bottom: 64px;
+} */
+
+.banner{
+	/* width: 100%; */
+	height: 960px;
+	background-image: url("https://hexschool.github.io/webLayoutTraining1st/week2/banner.png");
+	background-repeat: no-repeat;
+	background-size: cover; /*使背景圖放大至滿版，此可以不加這語法嗎？*/
+	background-position: center center;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	line-height: 42px;
+	font-weight: bold;
+	color: #fff;
+	/* margin-bottom: 64px; */
+}
+.bannerContent{
+	padding-top: 50px;  /* 怎麼看距離？  */
+	/* margin-top: 50px; */
+}
+
+.banner h1 {
+    font-size: 80px;
+    line-height: 94px;
+    margin-bottom: 32px;
+}
+
+.banner span {
+	font-size: 24px; /*為什麼還要在寫？*/
+    line-height: 42px;
+    /* font-weight: normal; */
+}
+
+.banner p {
+    /*width: 283px; --設定寬度讓文字斷行 建議寫死寬度嗎？*/
+	margin-bottom: 48px;
+	margin-left: 13px;
+}
+
+.socialMedia{
+	width: 288px; /*要下寬度 才會讓元素之間有mr-16px */
+	/* display: flex; */
+	justify-content: space-between;
+	margin-left: 13px;
+}
+
+/*  用flex下jcsb 故不用在寫mr
+.socialMedia li{
+	margin-right: 16px; 
+}
+*/
+
+.title{
+	font-size:64px;
+	line-height: 75px;
+}
+
+.about{
+	flex-direction: column;
+	align-items: center;
+	padding-top: 64px;
+	padding-bottom: 56px;
+}
+
+.about h2{
+	/* padding-top: 64px; */
+	margin-bottom:40px;
+}
+
+.about img{
+	width: 384px;
+	margin-bottom: 24px;
+}
+
+.personal {
+	font-size: 24px;
+	line-height: 42px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.personal li:not(:last-child){
+	margin-bottom: 8px;
+}
+.personalCareer{
+	border-top: 1px solid #000;
+	width: 384px;
+	font-size: 24px;
+	line-height: 42px;
+	font-weight: bold;
+}
+
+.personalCareer li:first-child{
+	margin-top: 32px;
+}
+
+.personalCareer li:not(:last-child){
+	margin-bottom: 32px;
+}
+
+.personalCareer li::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #891818;
+    position: absolute;
+	margin: 6px 0 0 -38px; /*不太會下位置 */
+}
+
+/*有需要下這個嗎？ */
+.personalCareer li{
+	position: relative;
+	padding-left: 31px; /*怎麼看出來的？ */
+}
+
+.brand{
+	background-color: #000;
+	color: #fff;
+	padding-top: 64px;
+	padding-bottom: 160px;
+	flex-direction:column;
+	align-items: center; /*為了要讓3塊圖片水平置中 */
+
+}
+
+.brand h3{
+	font-size: 24px;
+	line-height: 42px;
+	margin-bottom: 32px;	
+}
+
+.brand p{
+	font-size: 20px;
+	line-height: 42px;
+	margin-bottom: 48px;
+	font-style: normal;
+}
+
+.brandImg{
+	flex-wrap: wrap;
+	flex-direction: row;
+	/* justify-content: space-evenly; --有點不太確定要用哪種語法？*/
+	justify-content: space-around;
+	width: 1224px; /* 588x2+24x2 */
+}
+
+.brandImg img:first-child{
+	margin-bottom: 40px;
+}
+	
+.otherWork {
+	/* height: 1558px; --因子元素有mg pd值 故不寫死高度*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://hexschool.github.io/webLayoutTraining1st/week2/photo-1561291386-5be50364cfb5.png);
+	background-position: center bottom;
+	/* background-position: center center; */
+	/* background-size: cover; */
+	background-repeat: no-repeat;
+	padding-top: 64px;
+	padding-bottom: 106px;
+	color: #000;
+}
+
+.otherWork h2{
+	margin-bottom: 24px;
+}
+
+.otherWork p{
+	font-size: 20px;
+	line-height: 42px;
+	margin-bottom: 48px;
+	font-style: normal;
+}
+
+.otherWork li p{
+	color: #fff;
+	/* font-size: 20px;
+	line-height: 42px;
+	font-style: normal; */
+	margin-top: 16px;
+	margin-bottom: 56px;
+}
+
+.otherworkImg {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 1224px;
+}
+/*  第二種作法 寬：1200,使用jcsb
+.otherWorkImg {
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 104px;
+} */
+.contact{
+	background: #000000;
+	color: #fff;
+	padding-top: 64px;
+	padding-bottom: 80px;
+}
+
+.contact p{
+	font-size: 24px;
+	line-height: 36px;
+}
+
+.mb-16{
+	margin-bottom: 16px;
+}
+
+
+
+     
